@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZN Monsters Inc - Customizable Caps</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #b0ffb0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0a0a0a;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #0a5;
+        }
+        header h1 {
+            margin: 0;
+            color: #b0ffb0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .customization-section {
+            margin-bottom: 20px;
+        }
+        .customization-section h2 {
+            color: #b0ffb0;
+            margin-bottom: 10px;
+        }
+        .options {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .options img {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 2px solid #b0ffb0;
+        }
+        .options img:hover {
+            border-color: #0a5;
+        }
+        .add-to-cart {
+            background-color: #0a5;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #000;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+        .add-to-cart:hover {
+            background-color: #0c7;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0a0a0a;
+            color: #b0ffb0;
+            border-top: 2px solid #0a5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SZN Monsters Inc - Customizable Caps</h1>
+    </header>
+
+    <div class="container">
+        <section class="customization-section">
+            <h2>Customize Your Cap</h2>
+            <p>Select a color:</p>
+            <div class="options">
+                <!-- Each image links to a separate registration page for that specific cap -->
+                <a href="green_cap_registration.html"><img src="green_cap.jpeg" alt="Green Cap"></a>
+                <a href="black_cap_registration.html"><img src="black_cap.jpeg" alt="Black Cap"></a>
+                <a href="blue_cap_registration.html"><img src="blue_cap.jpeg" alt="Blue Cap"></a>
+            </div>
+        </section>
+
+        <a href="#" class="add-to-cart">Add to Cart</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SZN Monsters Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
