@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Cap Registration - SZN Monsters Inc</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #b0ffb0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0a0a0a;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #0a5;
+        }
+        header h1 {
+            margin: 0;
+            color: #b0ffb0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .options {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .options img {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 2px solid #b0ffb0;
+        }
+        .options img:hover {
+            border-color: #0a5;
+        }
+        .add-to-cart {
+            background-color: #0a5;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #000;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .add-to-cart:hover {
+            background-color: #0c7;
+        }
+        .message {
+            margin-top: 10px;
+            color: #0a5;
+        }
+    </style>
+    <script>
+        let selectedLogo = '';
+
+        function selectLogo(logoName) {
+            selectedLogo = logoName;
+            document.getElementById('selectedLogoDisplay').innerText = "Selected Logo: " + logoName;
+        }
+
+        function addToCart() {
+            if (selectedLogo) {
+                document.getElementById('message').innerText = "You have added the Green Cap with the " + selectedLogo + " logo to your cart!";
+            } else {
+                document.getElementById('message').innerText = "Please select a logo before adding to cart.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Green Cap Registration - SZN Monsters Inc</h1>
+    </header>
+
+    <div class="container">
+        <h2>Choose Your Logo</h2>
+        <div class="options">
+            <!-- Each logo image is clickable and selects a logo -->
+            <img src="logo1.jpg" alt="Logo 1" onclick="selectLogo('Logo 1')">
+            <img src="logo2.jpg" alt="Logo 2" onclick="selectLogo('Logo 2')">
+            <img src="logo3.jpg" alt="Logo 3" onclick="selectLogo('Logo 3')">
+        </div>
+
+        <!-- Display the selected logo -->
+        <p id="selectedLogoDisplay">No logo selected</p>
+
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+
+        <!-- Message display area -->
+        <p id="message" class="message"></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SZN Monsters Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
