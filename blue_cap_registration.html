@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Cap Registration - SZN Monsters Inc</title>
+    <title>Black Cap Registration - SZN Monsters Inc</title>
     <style>
         body {
             background-color: #000;
@@ -62,60 +62,21 @@
             color: #0a5;
         }
         .back-button {
-            background-color: #b0ffb0;
+            background-color: #555;
             padding: 10px 20px;
             border-radius: 5px;
-            color: #000;
+            color: #b0ffb0;
             cursor: pointer;
-            text-decoration: none;
             display: inline-block;
-            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 10px;
         }
         .back-button:hover {
-            background-color: #0c7;
+            background-color: #777;
         }
     </style>
     <script>
         let selectedLogo = '';
 
-        function selectLogo(logoName) {
-            selectedLogo = logoName;
-            document.getElementById('selectedLogoDisplay').innerText = "Selected Logo: " + logoName;
-        }
-
-        function addToCart() {
-            if (selectedLogo) {
-                document.getElementById('message').innerText = "You have added the Blue Cap with the " + selectedLogo + " logo to your cart!";
-            } else {
-                document.getElementById('message').innerText = "Please select a logo before adding to cart.";
-            }
-        }
-    </script>
-</head>
-<body>
-    <header>
-        <h1>Blue Cap Registration - SZN Monsters Inc</h1>
-    </header>
-
-    <div class="container">
-        <h2>Choose Your Logo</h2>
-        <div class="options">
-            <img src="logo1.jpg" alt="Logo 1" onclick="selectLogo('Logo 1')">
-            <img src="logo2.jpg" alt="Logo 2" onclick="selectLogo('Logo 2')">
-            <img src="logo3.jpg" alt="Logo 3" onclick="selectLogo('Logo 3')">
-        </div>
-
-        <p id="selectedLogoDisplay">No logo selected</p>
-
-        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
-
-        <p id="message" class="message"></p>
-
-        <a href="https://salma-atta1.github.io/szn-monsters-inc/" class="back-button">Return</a>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 SZN Monsters Inc. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        func
