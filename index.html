@@ -15,12 +15,26 @@
         header {
             background-color: #0a0a0a;
             padding: 20px;
-            text-align: center;
             border-bottom: 2px solid #0a5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         header h1 {
             margin: 0;
             color: #b0ffb0;
+        }
+        .register-button {
+            background-color: #0a5;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #000;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        .register-button:hover {
+            background-color: #0c7;
         }
         .container {
             max-width: 1200px;
@@ -49,20 +63,6 @@
         .options img:hover {
             border-color: #0a5;
         }
-        .add-to-cart {
-            background-color: #0a5;
-            padding: 10px 20px;
-            border-radius: 5px;
-            color: #000;
-            cursor: pointer;
-            display: inline-block;
-            text-align: center;
-            text-decoration: none;
-            margin-bottom: 20px;
-        }
-        .add-to-cart:hover {
-            background-color: #0c7;
-        }
         footer {
             text-align: center;
             padding: 20px;
@@ -75,6 +75,8 @@
 <body>
     <header>
         <h1>SZN Monsters Inc - Customizable Caps</h1>
+        <!-- Register button positioned in the top-right corner -->
+        <a href="https://forms.gle/kxvL8GphuDonXBd88" class="register-button">Register</a>
     </header>
 
     <div class="container">
@@ -88,9 +90,6 @@
                 <a href="https://salma-atta1.github.io/szn-monsters-inc/blue_cap_registration.html"><img src="blue_cap.jpeg" alt="Blue Cap"></a>
             </div>
         </section>
-
-        <!-- Link the Add to Cart button to your Google Form -->
-        <a href="https://forms.gle/kxvL8GphuDonXBd88" class="add-to-cart">Add to Cart</a>
     </div>
 
     <footer>
