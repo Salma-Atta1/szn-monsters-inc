@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Cap Registration - SZN Monsters Inc</title>
+    <title>Blue Cap Registration - SZN Monsters Inc</title>
     <style>
         body {
             background-color: #000;
@@ -43,23 +43,22 @@
         .options img:hover {
             border-color: #0a5;
         }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
         .add-to-cart {
             background-color: #0a5;
             padding: 10px 20px;
             border-radius: 5px;
             color: #000;
             cursor: pointer;
-            display: inline-block;
             text-align: center;
             text-decoration: none;
-            margin-top: 20px;
         }
         .add-to-cart:hover {
             background-color: #0c7;
-        }
-        .message {
-            margin-top: 10px;
-            color: #0a5;
         }
         .back-button {
             background-color: #555;
@@ -67,16 +66,59 @@
             border-radius: 5px;
             color: #b0ffb0;
             cursor: pointer;
-            display: inline-block;
             text-align: center;
             text-decoration: none;
-            margin-top: 10px;
         }
         .back-button:hover {
             background-color: #777;
+        }
+        .message {
+            margin-top: 10px;
+            color: #0a5;
         }
     </style>
     <script>
         let selectedLogo = '';
 
-        func
+        function selectLogo(logoName) {
+            selectedLogo = logoName;
+            document.getElementById('selectedLogoDisplay').innerText = "Selected Logo: " + logoName;
+        }
+
+        function addToCart() {
+            if (selectedLogo) {
+                document.getElementById('message').innerText = "You have added the Blue Cap with the " + selectedLogo + " logo to your cart!";
+            } else {
+                document.getElementById('message').innerText = "Please select a logo before adding to cart.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Blue Cap Registration - SZN Monsters Inc</h1>
+    </header>
+
+    <div class="container">
+        <h2>Choose Your Logo</h2>
+        <div class="options">
+            <img src="logo1.jpg" alt="Logo 1" onclick="selectLogo('Logo 1')">
+            <img src="logo2.jpg" alt="Logo 2" onclick="selectLogo('Logo 2')">
+            <img src="logo3.jpg" alt="Logo 3" onclick="selectLogo('Logo 3')">
+        </div>
+
+        <p id="selectedLogoDisplay">No logo selected</p>
+
+        <div class="button-group">
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            <a href="#" class="back-button" onclick="history.back()">Return</a>
+        </div>
+
+        <p id="message" class="message"></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SZN Monsters Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
