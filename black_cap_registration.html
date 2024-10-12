@@ -43,36 +43,38 @@
         .options img:hover {
             border-color: #0a5;
         }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
         .add-to-cart {
             background-color: #0a5;
             padding: 10px 20px;
             border-radius: 5px;
             color: #000;
             cursor: pointer;
-            display: inline-block;
             text-align: center;
             text-decoration: none;
-            margin-top: 20px;
         }
         .add-to-cart:hover {
             background-color: #0c7;
         }
+        .back-button {
+            background-color: #555;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #b0ffb0;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        .back-button:hover {
+            background-color: #777;
+        }
         .message {
             margin-top: 10px;
             color: #0a5;
-        }
-        .back-button {
-            background-color: #b0ffb0;
-            padding: 10px 20px;
-            border-radius: 5px;
-            color: #000;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .back-button:hover {
-            background-color: #0c7;
         }
     </style>
     <script>
@@ -107,11 +109,12 @@
 
         <p id="selectedLogoDisplay">No logo selected</p>
 
-        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        <div class="button-group">
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            <a href="#" class="back-button" onclick="history.back()">Return</a>
+        </div>
 
         <p id="message" class="message"></p>
-
-        <a href="https://salma-atta1.github.io/szn-monsters-inc/" class="back-button">Return</a>
     </div>
 
     <footer>
