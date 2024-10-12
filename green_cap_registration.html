@@ -61,6 +61,20 @@
             margin-top: 10px;
             color: #0a5;
         }
+        .back-button {
+            background-color: #555;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #b0ffb0;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .back-button:hover {
+            background-color: #777;
+        }
     </style>
     <script>
         let selectedLogo = '';
@@ -98,6 +112,9 @@
 
         <!-- Add to Cart Button -->
         <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+
+        <!-- Back Button -->
+        <a href="#" class="back-button" onclick="history.back()">Return</a>
 
         <!-- Message display area -->
         <p id="message" class="message"></p>
